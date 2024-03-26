@@ -28,17 +28,6 @@ class ViewShareProvider extends ServiceProvider
         //     return Blog::all();
         // });
 
-        $Pages = Page::with('getCategory')->get();
-        $Service = Service::orderBy('rank', 'asc')->get();
-        $Blog = Blog::all();
-        $Course = ServiceCategory::where('parent_id',1)->get();
-
-     
-        View::share([
-            'Pages' => $Pages,
-            'Service' => $Service,
-            'Blog' => $Blog,
-            'Course' => $Course
-        ]);
+    
     }
 }
