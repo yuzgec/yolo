@@ -78,10 +78,7 @@
                     <figcaption>
                         <div class="cbp-caption">
                             <a href="{{ route('studio', $item->slug)}}" class="cbp-caption-defaultWrap">
-                                <img src="https://img-macfit.mncdn.com//wp-content/uploads/2022/07/rsz_1nuspa_yoga_secilen.jpg" alt="{{ $item->title}} - Karşıyaka Yolo Studio">
-                            </a>
-                            <a href="{{ $item->getFirstMediaUrl('page', 'page') }}" class="lightbox post-lightbox">
-                                <i class="ti-zoom-in"></i>
+                                <img src="{{ (!$item->getFirstMediaUrl('page')) ? '/front/resimyok.jpg' : $item->getFirstMediaUrl('page', 'thumb')}}" alt="Karşıyaka {{ $item->title}} - Karşıyaka Yolo Studio">
                             </a>
                         </div>
 
@@ -145,7 +142,9 @@
 
                       <div class="back bg-dribbble">
                          <div class="box-details">
-                            <p class="fs-18 light">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                            <div class="fs-18 light">
+                               {{ $item->short}}
+                            </div>
                          </div>
                       </div>
                    </div>
