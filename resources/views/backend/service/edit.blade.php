@@ -28,7 +28,10 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <x-form-inputtext label="Başlık" name="title"></x-form-inputtext>
+                    <x-form-inputtext label="{{ request('name')}} Adı" name="title"></x-form-inputtext>
+                    @if(request('name') == 'Ekip')
+                     <x-form-inputtext label="{{ request('name')}} Adı" name="title"></x-form-inputtext>
+                    @endif
                     <x-form-textarea label="Kısa Açıklama" name="short" :ck='null'></x-form-textarea>
                     <x-form-textarea label="Açıklama" name="desc"></x-form-textarea>
                     <div class="card-header mb-2">
@@ -39,7 +42,9 @@
                     </div>
                     <x-form-inputtext label="Seo Başlık" name="seo_title"/>
                     <x-form-inputtext label="Seo Açıklama" name="seo_desc"/>
+                    @if(!request('name') == 'Ekip')
                     <x-form-inputtext label="Seo Anahtar Kelime" name="seo_key"/>
+                    @endif
                 </div>
             </div>
         </div>
@@ -65,6 +70,29 @@
                         @endif
 
                     <x-form-file label="" name="image"></x-form-file>
+                </div>
+
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><line x1="15" y1="8" x2="15.01" y2="8" /><rect x="4" y="4" width="16" height="16" rx="3" /><path d="M4 15l4 -4a3 5 0 0 1 3 0l5 5" /><path d="M14 14l1 -1a3 5 0 0 1 3 0l2 2" /></svg>
+                        Üst Kapak
+                    </h4>
+                </div>
+                <div class="card-body justify-content-center align-items-center">
+                        <div class="col">
+                            <img src="{{ (!$Edit->getFirstMediaUrl('cover')) ? '/backend/resimyok.jpg': $Edit->getFirstMediaUrl('cover')}}" class="img-fluid mb-2 mt-2" alt="Image">
+                        </div>
+                        @if($Edit->getFirstMediaUrl('page'))
+                        <label class="form-check form-check-single form-switch mb-1"  >
+                            <input class="form-check-input switch" type="checkbox" name="removeCoverImage" value="0">
+                            <span style="margin-left: 15px" class="">Resmi Kaldır</span>
+                        </label>
+                        @endif
+
+                    <x-form-file label="" name="cover"></x-form-file>
                 </div>
 
             </div>

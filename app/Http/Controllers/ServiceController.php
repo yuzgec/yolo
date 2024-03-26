@@ -42,14 +42,21 @@ class ServiceController extends Controller
         $New->seo_key = $request->seo_key;
         $New->seo_title = $request->seo_title;
 
+      
         if($request->hasfile('image')){
-            imageupload($New,$request->image);
+            $New->addMedia($request->image)->toMediaCollection('page');
+        }
+
+
+        if($request->hasfile('cover')){
+            $New->addMedia($request->image)->toMediaCollection('page');
         }
 
         if($request->hasfile('gallery')) {
-            imageupload($New,null ,$request->gallery);
+            foreach ($request->gallery as $item){
+                $New->addMedia($item)->toMediaCollection('gallery');
+            }
         }
-
         $New->save();
 
         toast(SWEETALERT_MESSAGE_CREATE,'success');
@@ -73,6 +80,8 @@ class ServiceController extends Controller
 
     public function update(ServiceRequest $request, $id)
     {
+
+        //dd($request->all());
         $Update = Service::findOrFail($id);
         $Update->title = $request->title;
         $Update->category = $request->category;
@@ -87,13 +96,24 @@ class ServiceController extends Controller
             $Update->media()->where('collection_name', 'page')->delete();
         }
 
-        if ($request->hasFile('image')) {
-            imageupload($Update,$request->image);
+        if($request->removeCoverImage == "1"){
+            $Update->media()->where('collection_name', 'cover')->delete();
         }
 
+        if ($request->hasFile('image')) {
+            $Update->media()->where('collection_name', 'page')->delete();
+            $Update->addMedia($request->image)->toMediaCollection('page');
+        }
+
+        if ($request->hasFile('cover')) {
+            $Update->media()->where('collection_name', 'cover')->delete();
+            $Update->addMedia($request->cover)->toMediaCollection('cover');
+        }
 
         if($request->hasfile('gallery')) {
-            imagesupload($Update,$request->gallery);
+            foreach ($request->gallery as $item){
+                $Update->addMedia($item)->toMediaCollection('gallery');
+            }
         }
 
         $Update->save();
@@ -103,13 +123,13 @@ class ServiceController extends Controller
 
     }
 
-    public function destroy($id)
+    public function destroy($id, Request $request)
     {
         $Delete = Service::findOrFail($id);
         $Delete->delete();
 
         toast(SWEETALERT_MESSAGE_DELETE,'success');
-        return redirect()->route('service.index');
+        return redirect()->route('service.index',['category' => $request->category, 'name' => $request->name]);
     }
 
     public function getTrash(){
@@ -136,7 +156,7 @@ class ServiceController extends Controller
             $filenamewithextension = $request->file('upload')->getClientOriginalName();
             $filename = pathinfo($filenamewithextension, PATHINFO_FILENAME);
             $extension = $request->file('upload')->getClientOriginalExtension();
-            $filenametostore = seo($filename).'_'.time().'.'.$extension;
+            $filenametostore = $filename.'_'.time().'.'.$extension;
             $request->file('upload')->storeAs('public/uploads', $filenametostore);
             $CKEditorFuncNum = $request->input('CKEditorFuncNum');
             $url = asset('storage/uploads/'.$filenametostore);

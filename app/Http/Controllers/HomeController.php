@@ -15,13 +15,19 @@ class HomeController extends Controller
 {
 
     public function index(){
-        return view('frontend.index');
+
+        $About = Page::where('id',1)->first();
+        return view('frontend.index',compact('About'));
     }
 
-    public function qr(){
-        return view('frontend.page.meltem');
+    public function syllabus(){
+        return view('frontend.page.syllabus');
     }
 
+    public function preregistration(){
+        return view('frontend.page.preregistration');
+    }
+    
     public function contact(){
         return view('frontend.contact');
     }
@@ -32,27 +38,50 @@ class HomeController extends Controller
 
     }
 
-    public function service(){
-        return view('frontend.service.index');
+    public function services(){
+        $All = Service::where('category', 1)->get();
+        return view('frontend.service.index',compact('All'));
     }
 
-    public function reference(){
-        $All = Service::where('category', 3)->get();
-        return view('frontend.page.reference',compact('All'));
-    }
 
-    public function servicedetail($slug){
+    public function service($slug){
         $Detay = Service::where('category', 1)->where('slug', $slug)->firstOrFail();
         return view('frontend.service.detail', compact('Detay'));
+    }
+
+
+    public function studios(){
+        $All = Service::where('category', 2)->get();
+        return view('frontend.studio.index',compact('All'));
+    }
+
+    public function studio($slug){
+        $Detay = Service::where('category', 2)->where('slug', $slug)->firstOrFail();
+        return view('frontend.studio.detail', compact('Detay'));
+    }
+
+    public function campaigns(){
+        $All = Service::where('category', 3)->get();
+        return view('frontend.service.campaigns',compact('All'));
+    }
+
+    public function campaign($slug){
+        $Detay = Service::where('category', 3)->where('slug', $slug)->firstOrFail();
+        return view('frontend.service.campaign', compact('Detay'));
     }
 
     public function project(){
         return view('frontend.project.index');
     }
 
+    public function hr(){
+        return view('frontend.page.hr');
+    }
+
 
     public function team(){
-        return view('frontend.page.team');
+        $All = Service::where('category', 4)->get();
+        return view('frontend.page.team', compact('All'));
     }
 
     public function projectdetail($slug){

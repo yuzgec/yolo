@@ -6,11 +6,24 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+
 Route::get('/iletisim', [HomeController::class, 'contact'])->name('contactus');
 Route::get('/kurumsal', [HomeController::class, 'corporate'])->name('corporate');
 Route::get('/sayfa/{url}', [HomeController::class, 'corporatedetail'])->name('corporatedetail');
-Route::get('/hizmetlerimiz', [HomeController::class, 'service'])->name('service');
-Route::get('/hizmet/{url}', [HomeController::class, 'servicedetail'])->name('servicedetail');
+
+//Hizmetler Route
+Route::get('/hizmetlerimiz', [HomeController::class, 'services'])->name('services');
+Route::get('/hizmet/{url}', [HomeController::class, 'service'])->name('service');
+
+Route::get('/studyolarimiz', [HomeController::class, 'studios'])->name('studios');
+Route::get('/studio/{url}', [HomeController::class, 'studio'])->name('studio');
+
+Route::get('/kampanyalarimiz', [HomeController::class, 'campaigns'])->name('campaigns');
+Route::get('/kampanya/{url}', [HomeController::class, 'campaign'])->name('campaign');
+
+//Hizmetler Route
+
 Route::get('/projelerimiz', [HomeController::class, 'project'])->name('project');
 Route::get('/proje/{url}', [HomeController::class, 'projectdetail'])->name('projectdetail');
 Route::get('/makaleler', [HomeController::class, 'blog'])->name('blog');
@@ -18,9 +31,15 @@ Route::get('/makale/{url}', [HomeController::class, 'blogdetail'])->name('blogde
 Route::get('/sss', [HomeController::class, 'sss'])->name('sss');
 Route::get('/video-galeri', [HomeController::class, 'video'])->name('video');
 Route::get('/referanslarimiz', [HomeController::class, 'reference'])->name('reference');
-Route::get('/meltemcomlekcioglu', [HomeController::class, 'qr'])->name('qr');
 Route::get('/sss', [HomeController::class, 'faq'])->name('faq');
 Route::get('/egitmenlerimiz', [HomeController::class, 'team'])->name('team');
+Route::get('/ik', [HomeController::class, 'hr'])->name('hr');
+Route::get('/ders-programi', [HomeController::class, 'syllabus'])->name('syllabus');
+Route::get('/önkayit', [HomeController::class, 'preregistration'])->name('pre-registration');
+
+
+
+
 Route::post('/form', [HomeController::class, 'form'])->name('form');
 
 Route::group(["prefix"=>"go", 'middleware' => ['auth','web', 'admin']],function() {

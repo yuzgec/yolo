@@ -43,7 +43,7 @@
                     id="slide-2800-layer-1"
                     data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
                     data-y="['middle','middle','middle','middle']" data-voffset="['-80','-80','-130','-157']"
-                    data-fontsize="['130','130','100','80']"
+                    data-fontsize="['100','100','70','70']"
                     data-lineheight="['130','130','100','80']"
                     data-width="none"
                     data-height="none"
@@ -56,7 +56,7 @@
                     data-paddingright="[0,0,0,0]"
                     data-paddingbottom="[0,0,0,0]"
                     data-paddingleft="[0,0,0,0]"
-                    style="z-index: 6; white-space: nowrap; font-size: 130px; line-height: 130px; font-weight: 700; color: rgba(255, 255, 255, 1.00);font-family:Arial, Helvetica, sans-serif;border-width:0px;letter-spacing:-7px;">YOLO Academy
+                    style="z-index: 6; white-space: nowrap; font-size: 130px; line-height: 130px; font-weight: 700; color: rgba(255, 255, 255, 1.00);font-family:Arial, Helvetica, sans-serif;border-width:0px;letter-spacing:-7px;">YOLO Fitness
                 </div>
 
                 <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme"
@@ -95,7 +95,7 @@
                     data-paddingbottom="[0,0,0,0]"
                     data-paddingleft="[0,0,0,0]"
                     style="z-index: 8; min-width: 640px; max-width: 640px; white-space: nowrap; font-size: 40px; line-height: 40px; font-weight: 400; color: rgba(255, 255, 255, 1.00);font-family:Georgia, serif;font-style:italic;border-width:0px;">
-                    Dedicated. Inspired. Passionate.
+                    Fitness. Kickbox. Pilates. Yoga. Zumba. 
                 </div>
 
                 <div class="tp-caption rev-btn  tp-resizeme"

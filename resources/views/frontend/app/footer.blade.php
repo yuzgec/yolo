@@ -3,7 +3,7 @@
         <div class="row row-eq-height">
 
             <div class="col-lg-3 col-sm-6 mt-40 t-left">
-                <img src="/logob.png" class="block width-100" alt="Ahmet Gökşin Güzeltepe">
+                <img src="/logob.png" class="block width-100" alt="Yolo Fitness - Karşıyaka">
             </div>
 
             <div class="col-lg-3 col-sm-6 mt-40">
@@ -21,17 +21,12 @@
                     </li>
                    
                     <li>
-                        <a href="{{ route('project')}}" title="Projelerimiz" class="white-hover">
-                           Projelerimiz
-                        </a>
-                    </li>
-                    <li>
                         <a href="{{ route('reference')}}" title="Referanslarımız" class="white-hover">
                            Referanslarımız
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('contactus')}}" title="İnsan Kaynakları" class="white-hover">
+                        <a href="{{ route('hr')}}" title="İnsan Kaynakları" class="white-hover">
                            İnsan Kaynakları
                         </a>
                     </li>
@@ -43,11 +38,11 @@
                 </ul>
             </div>  
             <div class="col-lg-3 col-sm-6 mt-40">
-                <h5 class="white fs-15">Hizmetlerimiz</h5>
+                <h5 class="white fs-15">Stüdyolarımız</h5>
                 <ul class="list list-lg px-0 gray5 pt-40 fs-16">
-                    @foreach ($Service->where('category', 1) as $item)
+                    @foreach ($Service->where('category', 2) as $item)
                         <li>
-                            <a href="{{ route('servicedetail', $item->slug)}}" title="{{ $item->title }}" class="white-hover">
+                            <a href="{{ route('service', $item->slug)}}" title="{{ $item->title }}" class="white-hover">
                                 {{ $item->title }}
                             </a>
                         </li>

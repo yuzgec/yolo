@@ -1,3 +1,4 @@
+
 @extends('frontend.app.master')
 
 
@@ -14,7 +15,7 @@ style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/back
                Yolo Fitness - Karşıyaka
             </h5>
             <h1 class="mt-15 lh-md white">
-                Eğitmenlerimiz
+                Kampanyalarımız
             </h1>
 
             <div
@@ -25,10 +26,10 @@ style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/back
                 <i class="ti-angle-right fs-7 mx-15"></i>
                 <a href="{{ route('home')}}">Anasayfa</a>
                 <i class="ti-angle-right fs-7 mx-15"></i>
-                <a href="#" class="stay c-default opacity-7">Kurumsal</a>
+                <a href="#" class="stay c-default opacity-7">Yolo Fitness</a>
                 <i class="ti-angle-right fs-7 mx-15"></i>
 
-                <a href="#" class="stay c-default opacity-7">Ekibimiz</a>
+                <a href="#" class="stay c-default opacity-7">Kampanyalarımız</a>
             </div>
 
         </div>
@@ -50,13 +51,12 @@ style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/back
 
         <div class="row">
             @foreach ($All as $item)
-            <div class="col-md-6 col-12 mt-30 c-plus" data-bs-toggle="modal" data-bs-target="#modal-0{{$item->id}}">
+            <div class="col-lg-4 col-sm-6 col-12 mt-30 c-plus" data-bs-toggle="modal" data-bs-target="#modal-0{{$item->id}}">
                 <div class="row row-eq-height">
                     <div class="col-auto d-flex align-items-end">
                         <h5 class="t-vertical bold fs-13 black lh-normal ls-5 uppercase">Pilates Eğitmeni</h5>
                     </div>
-                    <div class="col height-400 mr-15 dark-bottom d-flex align-items-end justify-content-start flex-wrap"
-                     data-bg="url({{ (!$item->getFirstMediaUrl('page')) ? '/backend/resimyok.jpg': $item->getFirstMediaUrl('page')}})">
+                    <div class="col height-400 mr-15 dark-bottom d-flex align-items-end justify-content-start flex-wrap" data-bg="url(https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/a1/a15e3308ee7183d1b6cb5a3f61eca2846394fb43_full.jpg)">
                         <div class="t-center fullwidth p-3">
                             <h4 class="fs-13 white uppercase ls-3">{{ $item->title}}</h4>
                         </div>
@@ -67,7 +67,7 @@ style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/back
 
             <div class="col-12 mt-120 t-center">
                 <h5 class="font-secondary uppercase fs-20 fs-14-sm black">
-                    <a href="{{ route('hr')}}" title="İnsan Kaynaları" class="career-btn underline-slide underline-hover-slide">
+                    <a href="#" class="career-btn underline-slide underline-hover-slide">
                         Ekibimize Katılmak İster Misin?
                     </a>
                 </h5>
@@ -108,7 +108,7 @@ style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/back
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-5 col-12 mnh-400" data-bg="url({{ (!$item->getFirstMediaUrl('page')) ? '/backend/resimyok.jpg': $item->getFirstMediaUrl('page')}})"></div>
+                    <div class="col-lg-5 col-12 mnh-400" data-bg="url(https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/a1/a15e3308ee7183d1b6cb5a3f61eca2846394fb43_full.jpg)"></div>
                 </div>
             </div>
         </div>

@@ -23,6 +23,25 @@
     .cbp:hover .cbp-nav-controls div:hover{opacity:1;}
     .cbp-nav-controls div.cbp-nav-next:before{content:"\e649";}
 </style>
+
+<style>
+    /* Rotate Boxes */
+    .rotate-container{ height: auto; -webkit-perspective: 1000px; -moz-perspective: 1000px; -o-perspective: 1000px; perspective: 1000px; }
+    .rotate-box .front, .back{ width: 100%; height: 100%; }
+    .rotate-box{ width: 100%; height: 300px; position: relative; -webkit-transition: 0.6s; -webkit-transform-style: preserve-3d; -moz-transition: 0.6s; -moz-transform-style: preserve-3d; -o-transition: 0.8s; -o-transform-style: preserve-3d; transition: 0.8s; transform-style: preserve-3d; -webkit-perspective: 1000px; -moz-perspective: 1000px; -o-perspective: 1000px; perspective: 1000px; pointer-events: none; }
+    .rotate-box .front, .rotate-box .back{ -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -o-backface-visibility: hidden; backface-visibility: hidden; position: absolute; top: 0; left: 0; perspective: inherit; -webkit-transform-style: preserve-3d; transform-style: preserve-3d; }
+    .rotate-box .front{ z-index: 2; }
+    .rotate-box .back{ -webkit-transform: rotateY(180deg); -moz-transform: rotateY(180deg); -o-transform: rotateY(180deg); transform: rotateY(180deg); }
+    .rotate-box .box-details{ -webkit-transform: translate3d(0,-50%,75px) scale(.85) translateZ(0); -moz-transform: translate3d(0,-50%,75px) scale(.85) translateZ(0); -o-transform: translate3d(0,-50%,75px) scale(.85) translateZ(0); transform: translate3d(0,-50%,75px) scale(.85) translateZ(0); display: block; -webkit-transform-style: preserve-3d; transform-style: preserve-3d; perspective: inherit; top:50%; position: relative; text-align: center; width: 100%; backface-visibility: hidden; -webkit-font-smoothing: subpixel-antialiased; }
+    /* Hovers */
+    .rotate-container:hover .rotate-box, .rotate-container.hover .rotate-box{ -webkit-transform: rotateY(180deg); -moz-transform: rotateY(180deg); -o-transform: rotateY(180deg); transform: rotateY(180deg); }
+    .rotate-container.hover1:hover .rotate-box, .rotate-container.hover1.hover .rotate-box{ -webkit-transform: rotateY(-180deg); -moz-transform: rotateY(-180deg); -o-transform: rotateY(-180deg); transform: rotateY(-180deg); }
+    .rotate-container.hover2:hover .rotate-box, .rotate-container.hover2.hover .rotate-box{ -webkit-transform: rotateX(180deg); -moz-transform: rotateX(180deg); -o-transform: rotateX(180deg); transform: rotateX(180deg); }
+    .rotate-container.hover3:hover .rotate-box, .rotate-container.hover3.hover .rotate-box{ -webkit-transform: rotateX(-180deg); -moz-transform: rotateX(-180deg); -o-transform: rotateX(-180deg); transform: rotateX(-180deg); }
+    /* Set the rotate for hover2 and 3 */
+    .rotate-container.hover2 .back, .rotate-container.hover3 .back{ -webkit-transform: rotateX(-180deg); -moz-transform: rotateX(-180deg); -o-transform: rotateX(-180deg); transform: rotateX(-180deg); }
+</style>
+
 @endsection
 
 @section('content')
@@ -31,11 +50,11 @@
 
 <div class="container mt-40 mb-40">
     <div class="row">
-        <div class="col t-center">
-            <h6 class="colored fs-11 ls-6 uppercase">Yolo Studio Hoş Geldiniz</h6>
-            <h1 class="lh-40 font-sedgwick mt-10">You can't succeed by waiting. Now run with all your strength!</h1>
-            <p class="t-center light fs-20 gray7 lh-35 mt-30">
-                Vivamus viverra felis eget ex ultricies feugiat. Mauris placerat orci in fermentum eleifend.
+        <div class="col">
+            <h6 class="colored fs-11 ls-6 uppercase  t-center">Yolo Studio Hoş Geldiniz</h6>
+            <h1 class="lh-40 font-sedgwick mt-10  t-center">İzmir Karşıyaka'da Yenilikçi Fitness Deneyimi: Yolo Fitness</h1>
+            <p class="light fs-20 gray7 lh-35 mt-30">
+               {!!$About->short!!}
             </p>
         </div>
     </div>
@@ -43,11 +62,13 @@
 
 <section id="blog" class="blog bb-1 b-gray2 post-radius post-shadow lh-lg py-50">
     <div class="t-center">
-        <h1 class="fs-36 fs-30-sm lh-sm medium dark animate" data-animation="fadeInDown" data-animation-delay="500">We blog to perfection</h1>
-        <h1 class="fs-36 fs-30-sm lh-sm medium dark animate" data-animation="fadeInDown" data-animation-delay="500">Reading enjoyment guaranteed</h1>
-        <p class="fs-18 lh-35 gray7 mt-30 mt-10-sm mxw-700 d-inline-flex animate" data-animation="fadeInDown" data-animation-delay="700">
-            Growing bleeding edge to, consequently, be transparent. Creating user stories and demographics. Good Design Matters
-        </p>
+
+
+        <div class="col t-center">
+            <h2 class="lh-45 mt-10 uppercase animate" data-animation="fadeInDown" data-animation-delay="500">Stüdyolarımız</h2>
+            <p class="light gray6 lh-30 fs-18 animate" data-animation="fadeInDown" data-animation-delay="500">Karşıyaka <b class="font-bold">YOLO Fitness </b>stüdyolarını aşağıdan inceleyebilirsiniz.</p>
+        </div>
+       
     </div>
     <div class="container mt-50">
         <div id="blog-posts" class="blog-posts grid">
@@ -56,7 +77,7 @@
                 <div class="cbp-item-wrapper">
                     <figcaption>
                         <div class="cbp-caption">
-                            <a href="{{ route('servicedetail', $item->slug)}}" class="cbp-caption-defaultWrap">
+                            <a href="{{ route('studio', $item->slug)}}" class="cbp-caption-defaultWrap">
                                 <img src="https://img-macfit.mncdn.com//wp-content/uploads/2022/07/rsz_1nuspa_yoga_secilen.jpg" alt="{{ $item->title}} - Karşıyaka Yolo Studio">
                             </a>
                             <a href="{{ $item->getFirstMediaUrl('page', 'page') }}" class="lightbox post-lightbox">
@@ -64,7 +85,7 @@
                             </a>
                         </div>
 
-                        <a href="{{ route('servicedetail', $item->slug)}}" class="post-details" alt="{{ $item->title}}">
+                        <a href="{{ route('studio', $item->slug)}}" class="post-details" alt="{{ $item->title}}">
 
                             <h4 class="post-title">
                                 {{ $item->title}}
@@ -82,7 +103,63 @@
             @endforeach
         </div>
     </div>
-</section>    
+</section>  
+
+<div class="container mt-30 mb-30">
+    <div class="row b-1 b-gray1 b-solid mx-0 py-60 bg-gradient2 relative d-flex align-items-center justify-content-center">
+       <div class="col-lg-8 col-12 pl-50 pr-0 px-30-sm py-15">
+          <h4 class="fs-24 white lh-35 light"> İzmir Karşıyaka'da Yenilikçi Fitness Deneyimi: Yolo Fitness </h4>
+       </div>
+       <div class="col-lg-3 offset-lg-1 col-12 pl-30-sm py-15">
+          <a href="#" class="lg-btn bg-white bs-lg-hover hover-cursor fs-11 bold uppercase slow-sm" data-color="#706B8B" style="color: rgb(112, 107, 139);">
+            <span class="cursor-container">
+                <span class="cursor">
+                    <span class="c-inner"></span>
+                </span>
+            </span> İletişime Geç
+         </a> 
+       </div>
+       <div class="absolute width-percent-80 fullwidth-sm left-50 left-0-sm zi-0 bottom-0 fullwidth height-percent-70 pointer-events-none">
+          <svg width="100%" height="100%" viewBox="0 0 948 143" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none">
+             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.471439085" opacity="0.100000001">
+                <path d="M0,142.142665 C52.2352383,57.0965861 112.235238,10.0497161 180,1.00205483 C281.647143,-12.5694372 480.074219,116.831768 680.226563,80.2973069 C813.661458,55.9409994 902.877604,74.9300983 947.875,137.264604 L0,142.142665 Z" fill="#FFFFFF"></path>
+             </g>
+          </svg>
+       </div>
+    </div>
+ </div>
+
+ <section id="element-template-05" class="pb-60 bt-1 b-gray1 b-solid">
+    <div class="container">
+       <div class="t-center">
+          <div class="row">
+            @foreach ($Course as $item) 
+             <div class="col-lg-4 col-12 mt-70">
+                <div class="rotate-container">
+                   <div class="rotate-box white">
+                      <div class="front bg-violet">
+                         <div class="box-details">
+                            <h4 class="light">{{ $item->title}}</h4>
+                            <p class="fs-13 light">Yolo Fitness</p>
+                         </div>
+                      </div>
+
+                      <div class="back bg-dribbble">
+                         <div class="box-details">
+                            <p class="fs-18 light">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+              
+                <h5 class="fs-17 black lh-30 light mt-20">{{ $item->title}}</h5>
+             </div>
+     
+             @endforeach
+          </div>
+       </div>
+    </div>
+ </section>
 
 @endsection
 @section('customJS')
@@ -232,5 +309,19 @@
         });
 
     })(jQuery, window, document);
+</script>
+
+
+
+<script>
+    $(".rotate-container").each(function {
+        $(body).on('touch touchmove', function{
+            $('.rotate-container').removeClass('hover');
+        })
+        $(this).on('touchstart', function(){
+            $(this).toggleClass('hover');
+        });
+    });
+    
 </script>
 @endsection
