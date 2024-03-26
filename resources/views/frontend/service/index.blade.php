@@ -31,8 +31,6 @@ style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/back
     <div class="container">
         <div class="row t-left t-center-sm align-items-center">
             @foreach ($Service as $item)
-                
-     
             <div class="col-lg-4 col-12 mt-30 perspective-lg relative zi-hover">
                 <div class="bg-white bs-lg-hover dark2 slow c-default py-40 px-40">
                     <div class="fs-45 mt-150">

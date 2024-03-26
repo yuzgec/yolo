@@ -32,9 +32,9 @@ style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/back
 </section>
 <div id="elementDescription" class="container py-100 py-100-sm">
 
-    <span class="fs-20 fs-16-sm gray7 ls-0 lh-35 light">
+    <div class="fs-16 fs-16-sm gray7 ls-0 lh-35 light">
         {!! $Detay->desc !!}
-    </span>
+    </div>
 
 </div>
 

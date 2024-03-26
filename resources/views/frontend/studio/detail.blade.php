@@ -35,9 +35,9 @@ style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/back
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-12 pt-50">
-                <span class="fs-20 fs-16-sm gray7 ls-0 lh-35 light">
+                <div class="fs-16 fs-16-sm gray7 ls-0 lh-35 light">
                     {!! $Detay->desc !!}
-                </span>
+                </div>
             </div>
             <div class="col-md-4 pl-30 col-12 bg-gray pt-30">   
 
