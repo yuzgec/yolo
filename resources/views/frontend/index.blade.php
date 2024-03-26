@@ -91,8 +91,7 @@
                                 {{ $item->title}}
                             </h4>
                           
-                            <p class="post-message">
-                                Vivamus viverra felis eget ex ultricies eget ex ultricies viverra feugiat.
+                            <p class="post-message ikisatir">
                                 {{ $item->short }}
                             </p>
 
@@ -161,6 +160,7 @@
     </div>
  </section>
 
+ <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6096.866657906884!2d27.10888679816783!3d38.46159080444706!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbd96e4ed7db9b%3A0xc17d35f9dc8d4e2f!2sYolo%20Fitness!5e0!3m2!1str!2str!4v1711457893962!5m2!1str!2str" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 @endsection
 @section('customJS')
 <script src="/front/js/revolutionslider/jquery.themepunch.revolution.min.js"></script>

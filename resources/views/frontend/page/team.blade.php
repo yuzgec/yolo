@@ -14,7 +14,7 @@ style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/back
                Yolo Fitness - Karşıyaka
             </h5>
             <h1 class="mt-15 lh-md white">
-                Eğitmenlerimiz
+                Ekibimiz
             </h1>
 
             <div
@@ -42,8 +42,6 @@ style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/back
         <h2 class="mt-15 fs-35 fs-25-sm bold lh-50 lh-40-sm dark3">
             Karşıyaka YOLO Fitness
         </h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, laboriosam porro odit vitae sed fugit obcaecati distinctio iusto ut, aliquid pariatur voluptatum atque! Corporis ullam molestias, possimus error qui eligendi.</p>
-
     </div>
 
     <div class="container mt-55 t-left">
@@ -53,7 +51,7 @@ style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/back
             <div class="col-md-6 col-12 mt-30 c-plus" data-bs-toggle="modal" data-bs-target="#modal-0{{$item->id}}">
                 <div class="row row-eq-height">
                     <div class="col-auto d-flex align-items-end">
-                        <h5 class="t-vertical bold fs-13 black lh-normal ls-5 uppercase">Pilates Eğitmeni</h5>
+                        <h5 class="t-vertical bold fs-13 black lh-normal ls-5 uppercase">{{ $item->seo_key}}/h5>
                     </div>
                     <div class="col height-400 mr-15 dark-bottom d-flex align-items-end justify-content-start flex-wrap"
                      data-bg="url({{ (!$item->getFirstMediaUrl('page')) ? '/backend/resimyok.jpg': $item->getFirstMediaUrl('page')}})">
@@ -91,14 +89,12 @@ style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/back
                             {{ $item->title}}
                         </h4>
                         <h6 class="gray6">
-                           Pilates Eğitmeni
+                            {{ $item->seo_key}}
                         </h6>
-                        <h4 class="mt-30 light dark1 fs-20 lh-35 fs-16-sm lh-30-sm">
-                            Curabitur vitae dignissim libero, sed lobortis sem. Vestibulum bibendum quis purus at eleifend. Curabitur ex est, vulputate vitae augue at, gravida ullamcorper justo. In fringilla hendrerit commodo. Duis id eleifend eros, in sodales turpis. Integer ultrices tellus lacinia, bibendum mi quis, convallis urna.
-                        </h4>
-                        <h4 class="mt-15 light dark1 fs-20 lh-35 fs-16-sm lh-30-sm">
-                            Sed id viverra felis, a feugiat ipsum. Vivamus non purus eu neque aliquet sagittis. Duis vitae dolor interdum, cursus erat vel, dictum felis. Curabitur hendrerit placerat fermentum.
-                        </h4>
+                        <div class="mt-30 light dark1 fs-20 lh-35 fs-16-sm lh-30-sm">
+                             {!! $item->desc !!}       
+                        </div>
+                      
                         <div class="mt-40">
                             <a href="#" class="icon-sm opacity-8-hover bg-twitter white mr-5 slow-sm">
                                 <i class="fab fa-twitter"></i>

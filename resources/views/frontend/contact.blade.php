@@ -63,15 +63,7 @@ style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/back
         </div>
         <div class="col-lg-5 col-12 px-0 height-full height-400-sm d-flex align-items-center justify-content-center">
             <div id="hotspots" class="hotspots fullwidth fullheight">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d192697.8885068434!2d28.84737615365628!3d41.00546324248149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa7040068086b%3A0xe1ccfe98bc01b0d0!2zxLBzdGFuYnVs!5e0!3m2!1str!2str!4v1703547132411!5m2!1str!2str"
-                    width="600"
-                    height="600"
-                    style="border:0;"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>  
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12496.647330960082!2d27.108689!3d38.460825!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbd96e4ed7db9b%3A0xc17d35f9dc8d4e2f!2sYolo%20Fitness!5e0!3m2!1str!2str!4v1711457819263!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
     </div>

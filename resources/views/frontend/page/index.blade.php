@@ -57,8 +57,8 @@ style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/back
                             {{ $item->title}}
                         </a>
                     </h5>
-                    <p class="fs-16 lh-25 mt-15 light">
-                        In sit amet posuere felis. Suspendisse finibus viverra justo eget ullamcorper.
+                    <div class="fs-16 lh-25 mt-15 light">
+                       {!! $item->short !!}
                     </p>
                 </div>
             </div>
