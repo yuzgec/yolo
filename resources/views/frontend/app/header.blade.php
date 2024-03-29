@@ -11,7 +11,6 @@
                 <a href="{{route('syllabus')}}" class="nav-link fs-14 " title="Instagram">DERS PROGRAMI</a>
                 <a href="{{route('hr')}}" class="nav-link fs-14 " title="Instagram">İ.K.</a>
                 <a href="https://www.instagram.com/{{ config('settings.instagram')}}" target="_blank" class="nav-link" title="Instagram"><i class="ti-instagram"></i></a>
-                <a href="https://www.facebook.com/{{ config('settings.facebook')}}" target="_blank" class="nav-link" title="facebook"><i class="ti-facebook"></i></a>
              </div>
            </div>
         </div>
@@ -53,7 +52,7 @@
                 <ul class="nav-links justify-content-end">
                     <li class="extra-links">
                         <div class="bracket"></div>
-                          <a href="{{ route('pre-registration')}}" class="nav-button white bg-colored fs-12 uppercase bold slow" title="ÖN KAYOT FORMU">
+                          <a href="{{ route('pre-registration')}}" class="nav-button white bg-colored fs-12 uppercase bold slow" title="ÖN KAYIT FORMU">
                             <span>ÖN KAYIT</span>
                         </a>
                     </li>

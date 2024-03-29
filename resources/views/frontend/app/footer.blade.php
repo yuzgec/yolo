@@ -56,21 +56,6 @@
                 <a href="mailto:{{ config('setttings.email1')}}" class="colored-hover fs-28  dark mt-15 block">{{ config('settings.email1')}} </a>
                 <div class="mt-30">
                     <a
-                        href="{{ config('settings.linkedin')}}"
-                        class="icon-xs width-40 height-40 bg-linkedin-hover bg-gray7 white slow-sm ml-10 ml-0-sm mr-10-sm">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a
-                        href="{{ config('settings.twitter')}}"
-                        class="icon-xs width-40 height-40 bg-twitter-hover bg-gray7 white slow-sm ml-10 ml-0-sm mr-10-sm">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a
-                        href="{{ config('settings.facebook')}}"
-                        class="icon-xs width-40 height-40 bg-facebook-hover bg-gray7 white slow-sm ml-10 ml-0-sm mr-10-sm">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                    <a
                         href="{{ config('settings.instagram')}}"
                         class="icon-xs width-40 height-40 bg-instagram-hover bg-gray7 white slow-sm ml-10 ml-0-sm mr-10-sm">
                         <i class="fab fa-instagram"></i>
