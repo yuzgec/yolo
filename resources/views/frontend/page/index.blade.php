@@ -47,8 +47,6 @@ style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/back
         </div>
 
         <div class="row t-left t-center-sm align-items-center">
-
-           
             @foreach ($Service->where('category', 2) as $item)
             <div class="col-lg-4 col-12 mt-30 perspective-lg relative zi-hover">
                 <div class="bg-white bs-lg-hover dark2 slow c-default py-40 px-40">
@@ -58,11 +56,10 @@ style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/back
                         </a>
                     </h5>
                     <div class="fs-16 lh-25 mt-15 light">
-                       {!! $item->short !!}
-                    </p>
+                    {!! $item->short !!}
+                    </div>
                 </div>
             </div>
-
             @endforeach
         </div>
     </div>

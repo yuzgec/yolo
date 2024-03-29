@@ -39,7 +39,10 @@ style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/back
                     <div>
                         <img src="{{ (!$Detay->getFirstMediaUrl('page')) ? '/front/resimyok.jpg' : $Detay->getFirstMediaUrl('page')}}" alt="Karşıyaka {{ $Detay->title}} - Karşıyaka Yolo Studio" class="img-fluid mb-30">
                     </div>
-                    {!! $Detay->desc !!}
+
+                    <div class="mb-50">
+                        {!! $Detay->desc !!}
+                    </div>  
                 </div>
             </div>
             <div class="col-md-4 pl-30 col-12 bg-gray pt-30">   
