@@ -175,7 +175,7 @@
     revapi1014 = tpj("#rev_slider_1014_1").show().revolution({
         sliderType:"standard",
     jsFileLocation:"revolution/js/",
-        sliderLayout:"fullwidth",
+        sliderLayout:"fullscreen",
         dottedOverlay:"none",
         delay:9000,
         navigation: {

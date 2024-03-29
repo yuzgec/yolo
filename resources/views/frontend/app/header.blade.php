@@ -1,5 +1,5 @@
 
-<nav id="navigation" class="modern-nav fs-12  sticky link-hover-01 hover-dark nav-white dropdown-radius has-top-bar" data-offset="50">    
+<nav id="navigation" class="modern-nav fixed bordered link-hover-01 hover-dark nav-dark dropdown-radius" data-offset="54">
     <div id="top-bar" class="top-bar visible-lg height-45 bb-1 b-soft-dark1">
         <div class="container">
            <div class="row align-items-center">
@@ -22,7 +22,7 @@
             <div class="col">
                 <a href="{{ route('home')}}" class="logo">
                     <img src="/logo.png" alt="{{ config('settings.img_alt')}}" class="logo-dark mxw-600">
-                    <img src="images/logos/logo_03_white.svg" alt="{{ config('settings.img_alt')}}" class="logo-white mxw-100">
+                    <img src="/logo.png" alt="{{ config('settings.img_alt')}}" class="logo-white mxw-100">
                </a>
             </div>
             <div class="col ml-auto nav-menu">
