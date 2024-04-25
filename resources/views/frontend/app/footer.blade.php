@@ -42,7 +42,7 @@
                 <ul class="list list-lg px-0 gray5 pt-20 fs-16">
                     @foreach ($Service->where('category', 2) as $item)
                         <li>
-                            <a href="{{ route('service', $item->slug)}}" title="{{ $item->title }}" class="white-hover">
+                            <a href="{{ route('studio', $item->slug)}}" title="{{ $item->title }}" class="white-hover">
                                 {{ $item->title }}
                             </a>
                         </li>
