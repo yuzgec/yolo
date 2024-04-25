@@ -5,7 +5,7 @@
 @section('content')
 
 
-<section id="home" class="relative white height-40vh mnh-250 align-items-center d-flex" 
+<section id="home" class="relative white height-60vh mnh-250 align-items-center d-flex" 
 data-bg="url(https://goldeyes.net/quadra/images/backgrounds/background_25.jpg)" 
 data-was-processed="true" 
 style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/background_25.jpg);">
