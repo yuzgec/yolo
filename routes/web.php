@@ -13,8 +13,8 @@ Route::get('/kurumsal', [HomeController::class, 'corporate'])->name('corporate')
 Route::get('/sayfa/{url}', [HomeController::class, 'corporatedetail'])->name('corporatedetail');
 
 //Hizmetler Route
-Route::get('/hizmetlerimiz', [HomeController::class, 'services'])->name('services');
-Route::get('/hizmet/{url}', [HomeController::class, 'service'])->name('service');
+Route::get('/derslerimiz', [HomeController::class, 'services'])->name('services');
+Route::get('/ders/{url}', [HomeController::class, 'service'])->name('service');
 
 Route::get('/studyolarimiz', [HomeController::class, 'studios'])->name('studios');
 Route::get('/studio/{url}', [HomeController::class, 'studio'])->name('studio');
@@ -35,7 +35,7 @@ Route::get('/sss', [HomeController::class, 'faq'])->name('faq');
 Route::get('/egitmenlerimiz', [HomeController::class, 'team'])->name('team');
 Route::get('/ik', [HomeController::class, 'hr'])->name('hr');
 Route::get('/ders-programi', [HomeController::class, 'syllabus'])->name('syllabus');
-Route::get('/önkayit', [HomeController::class, 'preregistration'])->name('pre-registration');
+Route::get('/onkayit', [HomeController::class, 'preregistration'])->name('pre-registration');
 
 
 
