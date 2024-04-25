@@ -7,10 +7,10 @@ style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/back
     <div class="container-md">
         <div class="t-center">
             <h5 class="fs-11 ls-4 semibold white uppercase">
-                Ahmet Gökşin Güzeltepe
+                Yolo Fitness - Karşıyaka
             </h5>
             <h1 class="mt-15 lh-md white">
-               Hizmetlerimiz
+               Derslerimiz
             </h1>
 
             <div
@@ -21,7 +21,7 @@ style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/back
                 <i class="ti-angle-right fs-7 mx-15"></i>
                 <a href="{{ route('home')}}" title="Anasayfa">Anasayfa</a>
                 <i class="ti-angle-right fs-7 mx-15"></i>
-                <a href="#" title="Hizmetlerimiz"  class="stay c-default opacity-7">Hizmetlerimiz</a>
+                <a href="#" title="Hizmetlerimiz"  class="stay c-default opacity-7">Derslerimiz</a>
             </div>
 
         </div>
@@ -36,16 +36,14 @@ style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/back
             <div class="col-lg-4 col-12 mt-30 perspective-lg relative zi-hover">
                 <div class="bg-white bs-lg-hover dark2 slow c-default py-40 px-40">
                     <div class="fs-45 mt-150">
-                        <img src="/logo.jpg" alt="{{ $item->title}}" class="" width="30px">
+                        <img src="/logo.jpg" alt="{{ $item->title}}" class="img-fluid" >
                     </div>
                     <h5 class="fs-18 medium mt-25">
                         <a href="{{ route('servicedetail', $item->slug)}}" title="{{ $item->title}}">
                             {{ $item->title}}
                         </a>
                     </h5>
-                    <p class="fs-16 lh-25 mt-15 light">
-                        In sit amet posuere felis. Suspendisse finibus viverra justo eget ullamcorper.
-                    </p>
+                    
                 </div>
             </div>
 
