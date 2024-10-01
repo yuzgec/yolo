@@ -20,11 +20,7 @@
                         </a>
                     </li>
                    
-                    <li>
-                        <a href="{{ route('reference')}}" title="Referanslarımız" class="white-hover">
-                           Referanslarımız
-                        </a>
-                    </li>
+                   
                     <li>
                         <a href="{{ route('hr')}}" title="İnsan Kaynakları" class="white-hover">
                            İnsan Kaynakları
@@ -65,7 +61,7 @@
             <div class="col-12 mt-60">
                 <div class="fullwidth bt-1 b-solid b-dark"></div>
                 <div class="py-30 row align-items-center justify-content-lg-between justify-content-center">
-                    <div class="col-lg col-12-sm gray6 fs-16 t-left t-center-sm">© {{ date('Y')}} Karşıyaka Yolo Tüm Hakları Saklıdır.</div>
+                    <div class="col-lg col-12-sm gray6 fs-16 t-left t-center-sm">© {{ date('Y')}} Karşıyaka Yolo Fitness. Tüm Hakları Saklıdır.</div>
                     <div class="col-lg col-12-sm mt-5-sm gray6 fs-16 t-right t-center-sm">
                         <a href="#" target="_blank" class="white-hover slow">Privacy Policy</a> |
                         <a href="#" target="_blank" class="white-hover slow">Terms and Condition</a>
