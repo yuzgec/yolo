@@ -51,7 +51,7 @@ style="background-image: url('/yolo-back.jpg');">
             <div class="col-lg-4 col-12 mt-30 perspective-lg relative zi-hover">
                 <div class="bg-white bs-lg-hover dark2 slow c-default py-40 px-40">
                     <h5 class="fs-18 medium mt-25">
-                        <a href="{{ route('service', $item->slug)}}" title="{{ $item->title}}">
+                        <a href="{{ route('studio', $item->slug)}}" title="{{ $item->title}}">
                             {{ $item->title}}
                         </a>
                     </h5>
