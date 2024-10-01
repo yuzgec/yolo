@@ -1,13 +1,13 @@
 @extends('frontend.app.master')
 @section('content')
-<section id="home" class="relative white height-60vh mnh-250 align-items-center d-flex" 
-data-bg="url(https://goldeyes.net/quadra/images/backgrounds/background_25.jpg)" 
+<section id="home" class="relative white bg-soft-dark7 height-60vh mnh-250 align-items-center d-flex" 
+data-bg="url({{ (!$Detay->getFirstMediaUrl('page')) ? '/front/resimyok.jpg' : $Detay->getFirstMediaUrl('page')}})" 
 data-was-processed="true" 
-style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/background_25.jpg);">
-    <div class="container-md">
+style="background-image: url({{ (!$Detay->getFirstMediaUrl('page')) ? '/front/resimyok.jpg' : $Detay->getFirstMediaUrl('page')}});">
+    <div class="container-md mt-100">
         <div class="t-center">
             <h5 class="fs-11 ls-4 semibold white uppercase">
-                Yolo Fitness
+                Karşıyaka Yolo Fitness
             </h5>
             <h1 class="mt-15 lh-md white">
                {{ $Detay->title}}
