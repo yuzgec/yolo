@@ -4,7 +4,7 @@
 data-bg="url({{ (!$Detay->getFirstMediaUrl('page')) ? '/front/resimyok.jpg' : $Detay->getFirstMediaUrl('page')}})" 
 data-was-processed="true" 
 style="background-image: url({{ (!$Detay->getFirstMediaUrl('page')) ? '/front/resimyok.jpg' : $Detay->getFirstMediaUrl('page')}});">
-    <div class="container-md mt-100">
+    <div class="container mt-100">
         <div class="t-center">
             <h5 class="fs-11 ls-4 semibold white uppercase">
                 Karşıyaka Yolo Fitness

@@ -1,17 +1,24 @@
 @extends('frontend.app.master')
 @section('content')
 @section('content')
-<section id="home" class="relative white bg-soft-dark2 height-60vh mnh-250 align-items-center d-flex" 
-data-bg="url('/yolo-back.jpg')" 
-data-was-processed="true" 
-style="background-image: url('/yolo-back.jpg');">
-    <div class="container-md">
-        <div class="t-center">
+
+
+<section id="home" class="relative white bg-soft-dark2 height-60vh mnh-250 align-items-center d-flex"  data-bg="url('/back.jpg')" data-was-processed="true"  style="background-image: url('/back.jpg');">
+    <div class="container mt-100">
+        <div class="row">
+            <div class="col-md-3">
+                <p class="fs-32 lh-35 bold">YOU</p>
+                <p class="fs-32 lh-35 bold">ONLY</p>
+                <p class="fs-32 lh-35 bold">LIVE</p>
+                <p class="fs-32 lh-35 bold">ONCES</p>
+            </div>
+            <div class="col-md-6">
+                <div class="t-center">
             <h5 class="fs-11 ls-4 semibold white uppercase">
-                Karşıyaka YOLO Fitness
+               Yolo Fitness - Karşıyaka
             </h5>
             <h1 class="mt-15 lh-md white">
-               İletişim
+                İletişim
             </h1>
 
             <div
@@ -20,14 +27,22 @@ style="background-image: url('/yolo-back.jpg');">
                     <i class="ti-home"></i>
                 </a>
                 <i class="ti-angle-right fs-7 mx-15"></i>
-                <a href="{{ route('home')}}" title="Anasayfa">Anasayfa</a>
+                <a href="{{ route('home')}}">Anasayfa</a>
                 <i class="ti-angle-right fs-7 mx-15"></i>
-                <a href="#" title="İletişim"  class="stay c-default opacity-7">İletişim</a>
+               
+
+                <a href="#" class="stay c-default opacity-7">İletişim</a>
             </div>
 
         </div>
+            </div>
+            <div class="col-md-3 t-center">
+                <img src="/logo.png" alt="{{ config('settings.img_alt')}}" class="logo-dark mxw-600">
+            </div>
+        </div>
     </div>
 </section>
+
 <section id="home">
     <div class="row mx-0">
         <div class="col-lg-7 col-12 o-auto scrollbar-styled height-full height-auto-sm px-0 d-flex align-items-center flex-wrap justify-content-center">

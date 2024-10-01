@@ -1,9 +1,9 @@
 @extends('frontend.app.master')
 @section('content')
 <section id="home" class="relative white bg-soft-dark2 height-60vh mnh-250 align-items-center d-flex" 
-data-bg="url('/yolo-back.jpg')" 
+data-bg="url('/back.jpg')" 
 data-was-processed="true" 
-style="background-image: url('/yolo-back.jpg');">
+style="background-image: url('/back.jpg');">
     <div class="container-md">
         <div class="t-center">
             <h5 class="fs-11 ls-4 semibold white uppercase">
