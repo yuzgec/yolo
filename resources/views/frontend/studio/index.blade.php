@@ -1,16 +1,23 @@
 @extends('frontend.app.master')
 @section('content')
-<section id="home" class="relative white bg-soft-dark2 height-60vh mnh-250 align-items-center d-flex" 
-data-bg="url('/back.jpg')" 
-data-was-processed="true" 
-style="background-image: url('/back.jpg');">
-    <div class="container-md">
-        <div class="t-center">
+
+
+<section id="home" class="relative white bg-soft-dark2 height-60vh mnh-250 align-items-center d-flex"  data-bg="url('/back.jpg')" data-was-processed="true"  style="background-image: url('/back.jpg');">
+    <div class="container mt-100">
+        <div class="row">
+            <div class="col-md-3">
+                <p class="fs-32 lh-35 bold">YOU</p>
+                <p class="fs-32 lh-35 bold">ONLY</p>
+                <p class="fs-32 lh-35 bold">LIVE</p>
+                <p class="fs-32 lh-35 bold">ONCES</p>
+            </div>
+            <div class="col-md-6">
+                <div class="t-center">
             <h5 class="fs-11 ls-4 semibold white uppercase">
-                Yolo Fitness - Karşıyaka
+               Yolo Fitness - Karşıyaka
             </h5>
             <h1 class="mt-15 lh-md white">
-               Derslerimiz
+                Stüdyolarımız
             </h1>
 
             <div
@@ -19,14 +26,22 @@ style="background-image: url('/back.jpg');">
                     <i class="ti-home"></i>
                 </a>
                 <i class="ti-angle-right fs-7 mx-15"></i>
-                <a href="{{ route('home')}}" title="Anasayfa">Anasayfa</a>
+                <a href="{{ route('home')}}">Anasayfa</a>
                 <i class="ti-angle-right fs-7 mx-15"></i>
-                <a href="#" title="Hizmetlerimiz"  class="stay c-default opacity-7">Derslerimiz</a>
+               
+
+                <a href="#" class="stay c-default opacity-7">Stüdyolarımız</a>
             </div>
 
         </div>
+            </div>
+            <div class="col-md-3 t-center">
+                <img src="/logo.png" alt="{{ config('settings.img_alt')}}" class="logo-dark mxw-600">
+            </div>
+        </div>
     </div>
 </section>
+
 <section id="service-boxes-02" class="pt-90 pb-120 bg-gray2 bt-1 b-gray1">
     <div class="container">
         <div class="row t-left t-center-sm align-items-center">

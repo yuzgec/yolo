@@ -5,12 +5,17 @@
 @section('content')
 
 
-<section id="home" class="relative white bg-soft-dark2 height-60vh mnh-250 align-items-center d-flex" 
-data-bg="url('/back.jpg')" 
-data-was-processed="true" 
-style="background-image: url('/back.jpg');">
-    <div class="container-md">
-        <div class="t-center">
+<section id="home" class="relative white bg-soft-dark2 height-60vh mnh-250 align-items-center d-flex"  data-bg="url('/back.jpg')" data-was-processed="true"  style="background-image: url('/back.jpg');">
+    <div class="container mt-100">
+        <div class="row">
+            <div class="col-md-3">
+                <p class="fs-32 lh-35 bold">YOU</p>
+                <p class="fs-32 lh-35 bold">ONLY</p>
+                <p class="fs-32 lh-35 bold">LIVE</p>
+                <p class="fs-32 lh-35 bold">ONCES</p>
+            </div>
+            <div class="col-md-6">
+                <div class="t-center">
             <h5 class="fs-11 ls-4 semibold white uppercase">
                Yolo Fitness - Karşıyaka
             </h5>
@@ -26,15 +31,20 @@ style="background-image: url('/back.jpg');">
                 <i class="ti-angle-right fs-7 mx-15"></i>
                 <a href="{{ route('home')}}">Anasayfa</a>
                 <i class="ti-angle-right fs-7 mx-15"></i>
-                <a href="#" class="stay c-default opacity-7">Yolo Fitness</a>
-                <i class="ti-angle-right fs-7 mx-15"></i>
+               
 
                 <a href="#" class="stay c-default opacity-7">Kampanyalarımız</a>
             </div>
 
         </div>
+            </div>
+            <div class="col-md-3 t-center">
+                <img src="/logo.png" alt="{{ config('settings.img_alt')}}" class="logo-dark mxw-600">
+            </div>
+        </div>
     </div>
 </section>
+
 
 <section id="team" class="pb-120 mt-50">
 
@@ -56,13 +66,7 @@ style="background-image: url('/back.jpg');">
                 </div>
             </div>
             @endforeach
-            <div class="col-12 mt-120 t-center">
-                <h5 class="font-secondary uppercase fs-20 fs-14-sm black">
-                    <a href="{{ route('hr')}}" class="career-btn underline-slide underline-hover-slide">
-                        Ekibimize Katılmak İster Misin?
-                    </a>
-                </h5>
-            </div>
+            
         </div>
     </div>
 
