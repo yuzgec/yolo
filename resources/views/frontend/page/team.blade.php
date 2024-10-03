@@ -6,7 +6,7 @@
 <section id="home" class="relative white bg-soft-dark2 height-60vh mnh-250 align-items-center d-flex"  data-bg="url('/back.jpg')" data-was-processed="true"  style="background-image: url('/back.jpg');">
     <div class="container mt-100">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3 d-none d-lg-block">
                 <p class="fs-32 lh-35 bold">YOU</p>
                 <p class="fs-32 lh-35 bold">ONLY</p>
                 <p class="fs-32 lh-35 bold">LIVE</p>
@@ -36,7 +36,7 @@
 
             </div>
             </div>
-            <div class="col-md-3 t-center">
+            <div class="col-md-3 t-center d-none d-lg-block">
                 <img src="/logo.png" alt="{{ config('settings.img_alt')}}" class="logo-dark mxw-600">
             </div>
         </div>

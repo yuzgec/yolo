@@ -5,7 +5,6 @@
 @section('content')
 
 
-<section id="home" class="relative white height-60vh mnh-250 align-items-center d-flex" 
 <section id="home" class="relative white bg-soft-dark2 height-60vh mnh-250 align-items-center d-flex" 
 data-bg="url('/back.jpg')" 
 data-was-processed="true" 
